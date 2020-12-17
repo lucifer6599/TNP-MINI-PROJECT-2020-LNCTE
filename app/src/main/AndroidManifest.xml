@@ -2,9 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.test.buspasssystem">
 
-    <uses-permission android:name="android.permission.CAMERA" android:requiredFeature="true" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:requiredFeature="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
@@ -12,10 +15,11 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PassDisplay"></activity>
+        <activity android:name=".PassDisplay2"></activity>
+        <activity android:name=".PassDisplay" />
         <activity
             android:name=".Student"
-            android:label="Student Page"></activity>
+            android:label="Student Page" />
         <activity
             android:name=".Admin"
             android:label="Admin Home" />
@@ -33,23 +37,22 @@
             android:label="Register" />
         <activity
             android:name=".Login"
-            android:label="Bus Pass">
-
-        </activity>
+            android:label="Bus Pass"></activity>
         <activity
             android:name=".MainActivity"
             android:label="Tnp Bus Pass Genrator"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.test.android.fileprovider"
@@ -57,9 +60,8 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
     </application>
-
 
 </manifest>
